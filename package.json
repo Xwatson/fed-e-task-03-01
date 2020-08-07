@@ -1,0 +1,17 @@
+{
+  "name": "fed-e-task-03-01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./code/snabbdom/index.html --open",
+    "build": "parcel build ./code/snabbdom/index.html"
+  },
+  "repository": "https://github.com/Xwatson/fed-e-task-03-01.git",
+  "author": "xuwusheng <xuwusheng@babytree-inc.com>",
+  "license": "MIT",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4",
+    "snabbdom": "0.7.4"
+  },
+  "devDependencies": {}
+}
