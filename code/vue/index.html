@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+</head>
+<body>
+    <div id="app">
+        <p>
+            姓名：{{name}}
+        </p>
+        <p>
+            年龄：<span v-text='age'></span>    
+        </p>
+        <p>
+            生日：<input v-model='name' /><input v-model='birthday' />
+        </p>
+        <p>
+            html: <span v-html='html'></span>
+        </p>
+        <p>
+            count: {{count}}
+            <button v-on:click='addClick'>click</button>
+        </p>
+    </div>
+    <script src="./dep.js"></script>
+    <script src="./watcher.js"></script>
+    <script src="./compiler.js"></script>
+    <script src="./observer.js"></script>
+    <script src="./vue.js"></script>
+    <script>
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                name: '张三',
+                age: 18,
+                birthday: '2020',
+                html: '<i><b>我是加粗斜体</b></i>',
+                count: 0,
+                p: { name: '123' }
+            },
+            methods: {
+                addClick() {
+                    this.count++
+                }
+            }
+        })
+    </script>
+</body>
+</html>
