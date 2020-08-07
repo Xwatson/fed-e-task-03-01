@@ -2,21 +2,6 @@
 
 ### 一、简答题
 - 1、当我们点击按钮的时候动态给 data 增加的成员是否是响应式数据，如果不是的话，如果把新增成员设置成响应式数据，它的内部原理是什么。
-```
-let vm = new Vue({
- el: '#el'
- data: {
-  o: 'object',
-  dog: {}
- },
- method: {
-  clickHandler () {
-   // 该 name 属性是否是响应式的
-   this.dog.name = 'Trump'
-  }
- }
-})
-```
 
   - 动态增加成员不是响应式数据，因为在创建Vue对象时将data数据通过Object.defineProperty转化成响应式，而Object.defineProperty只能对原有对象属性进行监听不能对新增属性监听
   - 通过$set给嵌套对象添加响应式属性，内部原理：
@@ -40,5 +25,7 @@ let vm = new Vue({
 #### 二、编程题
 - 1、模拟 VueRouter 的 hash 模式的实现，实现思路和 History 模式类似，把 URL 中的 # 后面的内容作为路由的地址，可以通过 hashchange 事件监听路由地址的变化。
 - 2、在模拟 Vue.js 响应式源码的基础上实现 v-html 指令，以及 v-on 指令。
-- 3、参考 Snabbdom 提供的电影列表的示例，利用Snabbdom 实现类似的效果，如图：
-![](https://s0.lgstatic.com/i/image/M00/26/F2/Ciqc1F7zUZ-AWP5NAAN0Z_t_hDY449.png)
+  - [代码地址](https://github.com/Xwatson/fed-e-task-03-01/blob/master/code/vue/compiler.js#L33)
+- 3、参考 Snabbdom 提供的电影列表的示例，利用Snabbdom 实现类似的效果，如图
+  - [代码地址](https://github.com/Xwatson/fed-e-task-03-01/blob/master/code/snabbdom/index.html)
+  ![](https://s0.lgstatic.com/i/image/M00/26/F2/Ciqc1F7zUZ-AWP5NAAN0Z_t_hDY449.png)
